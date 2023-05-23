@@ -10,9 +10,11 @@ import { NavigationContainer } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
 const index = () => {
+    // const {user} = useAuth();
+
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Splash">
+            <Stack.Navigator>
                 <Stack.Screen
                     name="Splash"
                     component={SplashScreen}

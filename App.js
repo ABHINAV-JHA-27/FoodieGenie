@@ -4,18 +4,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Navigation from "./src/Navigation";
 
 export default function App() {
-    return (
-        <SafeAreaView style={styles.container}>
-            <Navigation />
-            <StatusBar style="auto" />
-        </SafeAreaView>
-    );
+    return <Navigation />;
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
-    },
-});
+const styles = StyleSheet.create({});
