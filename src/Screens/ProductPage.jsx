@@ -1,15 +1,15 @@
-import {
-    View,
-    Text,
-    Image,
-    TouchableOpacity,
-    SafeAreaView,
-} from "react-native";
-import React from "react";
-import { ChevronLeftIcon } from "react-native-heroicons/solid";
-import { HeartIcon, MinusIcon, PlusIcon } from "react-native-heroicons/outline";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import {
+    Image,
+    SafeAreaView,
+    Text,
+    TouchableOpacity,
+    View,
+} from "react-native";
 import * as Animatable from "react-native-animatable";
+import { HeartIcon, MinusIcon, PlusIcon } from "react-native-heroicons/outline";
+import { ChevronLeftIcon } from "react-native-heroicons/solid";
 
 const ProductPage = (props) => {
     let item = props.route.params;

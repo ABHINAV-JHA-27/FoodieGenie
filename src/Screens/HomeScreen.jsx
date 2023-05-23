@@ -1,21 +1,20 @@
-import {
-    View,
-    Text,
-    Image,
-    SafeAreaView,
-    TextInput,
-    ScrollView,
-    TouchableOpacity,
-} from "react-native";
 import React, { useState } from "react";
 import {
-    AdjustmentsHorizontalIcon,
+    Image,
+    SafeAreaView,
+    ScrollView,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from "react-native";
+import * as Animatable from "react-native-animatable";
+import {
     Bars3CenterLeftIcon,
     MagnifyingGlassIcon,
 } from "react-native-heroicons/solid";
-import { categories, foodItems } from "../Constants";
-import * as Animatable from "react-native-animatable";
 import FoodCard from "../Components/FoodCard";
+import { categories, foodItems } from "../Constants";
 
 const HomeScreen = () => {
     const [activeCategory, setActiveCategory] = useState("Burger");

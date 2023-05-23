@@ -1,12 +1,11 @@
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../Screens/HomeScreen";
-import SplashScreen from "../Screens/SplashScreen";
-import Login from "../Screens/Login";
-import Signup from "../Screens/Signup";
-import ProductPage from "../Screens/ProductPage";
-import Checkout from "../Screens/Checkout";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import useAuth from "../Hooks/useAuth";
+import Checkout from "../Screens/Checkout";
+import HomeScreen from "../Screens/HomeScreen";
+import Login from "../Screens/Login";
+import ProductPage from "../Screens/ProductPage";
+import Signup from "../Screens/Signup";
 
 const Stack = createStackNavigator();
 

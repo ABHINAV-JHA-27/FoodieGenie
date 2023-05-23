@@ -1,6 +1,5 @@
-import { View, Text } from "react-native";
-import React, { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 import { auth } from "../../firebaseconfig";
 
 export default function useAuth() {

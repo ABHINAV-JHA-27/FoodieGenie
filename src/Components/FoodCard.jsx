@@ -1,8 +1,8 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import React from "react";
-import { ShoppingBagIcon } from "react-native-heroicons/solid";
-import * as Animatable from "react-native-animatable";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import * as Animatable from "react-native-animatable";
+import { ShoppingBagIcon } from "react-native-heroicons/solid";
 
 export default function FoodCard({ item, index }) {
     const navigation = useNavigation();

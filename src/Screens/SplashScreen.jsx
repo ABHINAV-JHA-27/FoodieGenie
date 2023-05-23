@@ -1,6 +1,5 @@
-import { View, Text, Image } from "react-native";
-import React, { useEffect } from "react";
-import useAuth from "../Hooks/useAuth";
+import React from "react";
+import { Image, Text, View } from "react-native";
 
 const SplashScreen = ({ navigation }) => {
     return (

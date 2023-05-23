@@ -1,8 +1,6 @@
-import Constants from "expo-constants";
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
-import Navigation from "./src/Navigation";
 import { useEffect, useState } from "react";
+import { StyleSheet } from "react-native";
+import Navigation from "./src/Navigation";
 import SplashScreen from "./src/Screens/SplashScreen";
 
 export default function App() {

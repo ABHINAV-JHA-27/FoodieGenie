@@ -1,9 +1,8 @@
-import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
-import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { ArrowLeftIcon } from "react-native-heroicons/solid";
 import { useNavigation } from "@react-navigation/native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { auth } from "../../firebaseconfig";
 
 const Signup = () => {
