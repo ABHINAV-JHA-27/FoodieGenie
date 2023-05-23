@@ -1,15 +1,8 @@
 import { View, Text, Image } from "react-native";
 import React, { useEffect } from "react";
+import useAuth from "../Hooks/useAuth";
 
 const SplashScreen = ({ navigation }) => {
-    // const {user} = useAuth();
-    const user = false;
-    useEffect(() => {
-        setTimeout(() => {
-            if (user) navigation.replace("Home");
-            else navigation.replace("Login");
-        }, 2000);
-    }, []);
     return (
         <View className="flex-1 relative">
             <Image
