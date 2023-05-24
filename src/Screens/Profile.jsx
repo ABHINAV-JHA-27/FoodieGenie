@@ -1,17 +1,15 @@
-import {
-    View,
-    Text,
-    Image,
-    SafeAreaView,
-    TouchableOpacity,
-    Dimensions,
-} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
-    Bars3CenterLeftIcon,
-    ChevronLeftIcon,
-} from "react-native-heroicons/solid";
-import { useNavigation } from "@react-navigation/native";
+    Dimensions,
+    Image,
+    SafeAreaView,
+    Text,
+    TouchableOpacity,
+    View,
+} from "react-native";
+import { ChevronLeftIcon } from "react-native-heroicons/solid";
+import * as Animatable from "react-native-animatable";
 
 const Profile = () => {
     const navigation = useNavigation();
@@ -31,7 +29,7 @@ const Profile = () => {
                         <ChevronLeftIcon size="23" stroke={50} color="black" />
                     </TouchableOpacity>
                 </View>
-                <View className="flex-col items-center space-y-5">
+                <View className="flex-col items-center">
                     <View
                         className="rounded-[100px] justify-center items-center"
                         style={{
@@ -51,63 +49,99 @@ const Profile = () => {
                         />
                     </View>
                     <Text>{}</Text>
-                    <TouchableOpacity
-                        className="rounded-2xl"
-                        style={{
-                            backgroundColor: "rgba(255,255,255,0.7)",
-                            width: Dimensions.get("window").width * 0.8,
-                            padding: 10,
-                        }}
-                        onpr
-                    >
-                        <Text
-                            style={{
-                                fontSize: 22,
-                                textAlign: "center",
-                                color: "gray",
-                            }}
-                        >
-                            My Account
-                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        className="rounded-2xl"
-                        style={{
-                            backgroundColor: "rgba(255,255,255,0.7)",
-                            width: Dimensions.get("window").width * 0.8,
-                            padding: 10,
-                        }}
-                        onpr
-                    >
-                        <Text
-                            style={{
-                                fontSize: 22,
-                                textAlign: "center",
-                                color: "gray",
-                            }}
-                        >
-                            Wishlist
-                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        className="rounded-2xl"
-                        style={{
-                            backgroundColor: "rgba(255,255,255,0.7)",
-                            width: Dimensions.get("window").width * 0.8,
-                            padding: 10,
-                        }}
-                        onpr
-                    >
-                        <Text
-                            style={{
-                                fontSize: 22,
-                                textAlign: "center",
-                                color: "gray",
-                            }}
-                        >
-                            Recent Orders
-                        </Text>
-                    </TouchableOpacity>
+                    <View className="mt-10 space-y-5">
+                        <Animatable.View delay={120} animation="slideInDown">
+                            <TouchableOpacity
+                                className="rounded-2xl"
+                                style={{
+                                    backgroundColor: "rgba(255,255,255,0.7)",
+                                    width: Dimensions.get("window").width * 0.8,
+                                    padding: 10,
+                                }}
+                                onpr
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 22,
+                                        textAlign: "center",
+                                        color: "gray",
+                                    }}
+                                >
+                                    Profile
+                                </Text>
+                            </TouchableOpacity>
+                        </Animatable.View>
+                        <Animatable.View delay={240} animation="slideInDown">
+                            <TouchableOpacity
+                                className="rounded-2xl"
+                                style={{
+                                    backgroundColor: "rgba(255,255,255,0.7)",
+                                    width: Dimensions.get("window").width * 0.8,
+                                    padding: 10,
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 22,
+                                        textAlign: "center",
+                                        color: "gray",
+                                    }}
+                                >
+                                    Wishlist
+                                </Text>
+                            </TouchableOpacity>
+                        </Animatable.View>
+                        <Animatable.View delay={360} animation="slideInDown">
+                            <TouchableOpacity
+                                className="rounded-2xl"
+                                style={{
+                                    backgroundColor: "rgba(255,255,255,0.7)",
+                                    width: Dimensions.get("window").width * 0.8,
+                                    padding: 10,
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 22,
+                                        textAlign: "center",
+                                        color: "gray",
+                                    }}
+                                >
+                                    Recent Orders
+                                </Text>
+                            </TouchableOpacity>
+                        </Animatable.View>
+                        <Animatable.View delay={480} animation="slideInDown">
+                            <TouchableOpacity
+                                className="rounded-2xl"
+                                style={{
+                                    backgroundColor: "rgba(255,255,255,0.7)",
+                                    width: Dimensions.get("window").width * 0.8,
+                                    padding: 10,
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 22,
+                                        textAlign: "center",
+                                        color: "gray",
+                                    }}
+                                >
+                                    About
+                                </Text>
+                            </TouchableOpacity>
+                        </Animatable.View>
+                    </View>
+                </View>
+                <Animatable.View
+                    delay={120}
+                    animation="slideInUp"
+                    style={{
+                        position: "absolute",
+                        bottom: 40,
+                        alignSelf: "center",
+                    }}
+                >
                     <TouchableOpacity
                         className="rounded-2xl"
                         style={{
@@ -115,7 +149,6 @@ const Profile = () => {
                             width: Dimensions.get("window").width * 0.4,
                             padding: 8,
                         }}
-                        onpr
                     >
                         <Text
                             style={{
@@ -127,7 +160,7 @@ const Profile = () => {
                             Logout
                         </Text>
                     </TouchableOpacity>
-                </View>
+                </Animatable.View>
             </SafeAreaView>
         </View>
     );
