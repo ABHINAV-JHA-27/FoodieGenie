@@ -11,7 +11,7 @@ export default function FoodCard({ item, index }) {
             delay={index * 120}
             animation="slideInRight"
             className="w-56 h-70 my-5 mr-6 p-3 py-5 rounded-3xl"
-            style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+            style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
         >
             <View className="flex-row justify-center">
                 <Image source={item.image} className="h-32 w-32" />

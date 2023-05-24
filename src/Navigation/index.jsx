@@ -6,6 +6,7 @@ import HomeScreen from "../Screens/HomeScreen";
 import Login from "../Screens/Login";
 import ProductPage from "../Screens/ProductPage";
 import Signup from "../Screens/Signup";
+import Profile from "../Screens/Profile";
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,13 @@ const index = () => {
                     <Stack.Screen
                         name="Home"
                         component={HomeScreen}
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
+                    <Stack.Screen
+                        name="Profile"
+                        component={Profile}
                         options={{
                             headerShown: false,
                         }}

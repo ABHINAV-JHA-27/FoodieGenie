@@ -54,7 +54,10 @@ export default function Login() {
                             Forgot Password?
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity className="py-3 bg-yellow-400 rounded-xl">
+                    <TouchableOpacity
+                        className="py-3 bg-yellow-400 rounded-xl"
+                        onPress={handleSubmit}
+                    >
                         <Text className="text-xl font-bold text-center text-gray-700">
                             Login
                         </Text>

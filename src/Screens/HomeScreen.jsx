@@ -16,7 +16,7 @@ import {
 import FoodCard from "../Components/FoodCard";
 import { categories, foodItems } from "../Constants";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     const [activeCategory, setActiveCategory] = useState("Burger");
     return (
         <View className="flex-1 relative">
@@ -34,19 +34,20 @@ const HomeScreen = () => {
                             color="black"
                         />
                     </View>
-                    <View
+                    <TouchableOpacity
                         className="rounded-2xl"
                         style={{
                             backgroundColor: "rgba(255,255,255,0.7)",
                             padding: 3,
                         }}
+                        onPress={() => navigation.navigate("Profile")}
                     >
                         <Image
                             className="h-12 w-12 rounded-2xl"
                             source={require("../../assets/images/me.png")}
                             style={{ backgroundColor: "rgba(255,255,255,0.7)" }}
                         />
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View className="my-12 space-y-2">
                     <Text className="mx-4 text-5xl font-medium text-gray-800">
